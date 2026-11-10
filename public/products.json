@@ -1,9 +1,9 @@
 [
 {
 "id":"picpak",
-"name":"Picpak",
+"name":"PicPak",
 "price":9990,
-"lead":"1度の充電で1年以上使えるデジタルフォトフレーム。",
+"lead":"1度の充電で1年以上使えるデジタルフォトフレーム",
 "specs":[
 "1度の充電で1年以上使用可能",
 "デジタルフォトフレーム"
@@ -19,9 +19,9 @@
 "id":"charmera",
 "name":"Charmera CLOT X KODAK",
 "price":12990,
-"lead":"大人気のCharmeraがCLOTとコラボ。",
+"lead":"大人気のKodak CharmeraがCLOTとコラボ",
 "specs":[
-"大人気のCharmeraとCLOTのコラボモデル"
+"大人気のKodak harmeraとCLOTのコラボモデル"
 ],
 "colors":[
 {"name":"ピンク","hex":"#f4a7c0","img":"","link":""},
