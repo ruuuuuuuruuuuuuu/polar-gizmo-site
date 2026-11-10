@@ -1,0 +1,30 @@
+:root{--g:#2e7d5b;--gd:#1f5a41;--r:#c8102e;--soft:#eef5f0;--t:#1d2a24}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:var(--t);line-height:1.9;background:#fff}
+a{color:var(--gd)}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1.5rem;padding:.7rem 5vw;border-bottom:3px solid var(--g);position:sticky;top:0;background:#fff;z-index:5}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700;font-size:1.2rem;color:var(--t);text-decoration:none}
+.seal{background:var(--r);color:#fff;width:2.1rem;height:2.1rem;display:grid;place-items:center;border-radius:3px;font-size:1.15rem;transform:rotate(-4deg)}
+nav{display:flex;flex-wrap:wrap;gap:.2rem 1.3rem}nav a{text-decoration:none;color:var(--t);font-size:.95rem;padding:.2rem 0;border-bottom:2px solid transparent}nav a:hover,nav a:focus-visible{border-color:var(--r)}
+main{max-width:960px;margin:0 auto;padding:2rem 5vw 4rem}
+h1,h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;color:var(--gd);line-height:1.5}
+h2{border-left:6px solid var(--r);padding-left:.7rem;margin:2.8rem 0 1rem}
+.hero{display:flex;gap:2.5rem;align-items:center;justify-content:center;background:var(--soft);border-top:4px solid var(--g);border-bottom:4px solid var(--g);padding:3rem 5vw;margin:-2rem -5vw 2.5rem}
+.vt{writing-mode:vertical-rl;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:var(--gd);letter-spacing:.2em;border-right:4px solid var(--r);padding-right:1.2rem;line-height:1.7}
+.hero p{max-width:26em;margin:0 0 1rem}
+.btn{display:inline-block;background:var(--r);color:#fff;text-decoration:none;padding:.8rem 2.2rem;border-radius:3px;font-weight:700;border:0;cursor:pointer}
+.btn:hover,.btn:focus-visible{background:#a30d25}.btn.off{background:#9aa;pointer-events:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.card{border:2px solid var(--g);color:var(--t);text-decoration:none;display:block}
+.card .ph{aspect-ratio:1}.card div.t{padding:.9rem 1rem 1rem}.card b{font-size:1.1rem}.card .pr{color:var(--r);font-weight:700}
+.ph{display:grid;place-items:center;width:100%;height:100%;aspect-ratio:1;border:1px solid #cfe0d6}
+.ph span{background:rgba(255,255,255,.88);padding:.3em .9em;border-radius:3px;text-align:center;font-size:.9rem}
+.pimg img{width:100%;display:block}
+.prod{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start}
+.price{font-size:1.7rem;font-weight:700;color:var(--r);margin:.2rem 0}.price small{font-size:.8rem;color:var(--t);font-weight:400;margin-left:.5rem}
+.sw{display:flex;flex-wrap:wrap;gap:.6rem;margin:.4rem 0 1.4rem}.sw button{width:2.6rem;height:2.6rem;border-radius:50%;border:2px solid #bbb;cursor:pointer}.sw button.on{outline:3px solid var(--g);outline-offset:2px}
+.note{font-size:.85rem;margin-top:1.2rem}
+.tbl{width:100%;border-collapse:collapse}.tbl th,.tbl td{border:1px solid #cfe0d6;padding:.7rem .9rem;vertical-align:top;text-align:left}.tbl th{background:var(--soft);width:30%}
+.news{list-style:none;padding:0}.news li{padding:.8rem 0;border-bottom:1px dashed #9bc2ae}.news time{color:var(--r);font-weight:700;margin-right:1rem}
+footer{background:var(--gd);color:#fff;padding:2rem 5vw;font-size:.9rem}footer a{color:#fff;margin-right:1.2rem}
+@media(max-width:600px){.hero{flex-direction:column;align-items:flex-start}.vt{writing-mode:horizontal-tb;border-right:0;border-left:4px solid var(--r);padding:0 0 0 .8rem;letter-spacing:.05em}.tbl th{width:36%}}
