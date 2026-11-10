@@ -1,12 +1,12 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Picpak | 極地的珍道具店</title><meta name="description" content="Picpak | 1度の充電で1年以上使えるデジタルフォトフレーム。"><link rel="stylesheet" href="style.css"></head><body><header><a class="logo" href="index.html"><span class="seal">極</span>極地的珍道具店</a><nav><a href="picpak.html">Picpak</a><a href="charmera.html">Charmera</a><a href="guide.html">お買い物ガイド</a><a href="about.html">お店情報</a><a href="news.html">ニュース</a></nav></header><main><section class="prod"><div class="pimg" id="img"></div><div><h1>Picpak</h1><p class="price">&yen;9,990<small>税込・送料無料</small></p><p>1度の充電で1年以上使えるデジタルフォトフレーム。</p><ul><li>1度の充電で1年以上使用可能</li><li>デジタルフォトフレーム</li></ul><p>カラー: <b id="cn"></b></p><div class="sw" id="sw"></div><a class="btn" id="buy">購入する</a><p class="note">並行輸入品のため、メーカー保証の対象外です。返品・交換は初期不良のみ、商品到着後3日以内にご連絡ください。詳しくは<a href="guide.html">お買い物ガイド</a>と<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></section><script>
-const NAME="Picpak";
-// 各色の link に Stripe の Payment Link、img に商品画像のパス(例: images/picpak-white.jpg)を入れる
-const COLORS=[{"name": "ホワイト", "hex": "#f4f4f0", "img": "", "link": ""}, {"name": "ブラック", "hex": "#222222", "img": "", "link": ""}, {"name": "レッド", "hex": "#c8102e", "img": "", "link": ""}, {"name": "ブルー", "hex": "#2f6fb5", "img": "", "link": ""}];
-</script><script>
-const sw=document.getElementById('sw'),img=document.getElementById('img'),cn=document.getElementById('cn'),buy=document.getElementById('buy');
-function pick(i){const c=COLORS[i];cn.textContent=c.name;
-img.innerHTML=c.img?'<img src="'+c.img+'" alt="'+NAME+' '+c.name+'">':'<div class="ph" style="background:'+c.hex+'"><span>'+NAME+'<br>'+c.name+'（仮画像）</span></div>';
-if(c.link){buy.href=c.link;buy.classList.remove('off');buy.textContent='購入する'}else{buy.removeAttribute('href');buy.classList.add('off');buy.textContent='販売準備中'}
-[...sw.children].forEach((b,j)=>b.classList.toggle('on',j===i))}
-COLORS.forEach((c,i)=>{const b=document.createElement('button');b.style.background=c.hex;b.title=c.name;b.setAttribute('aria-label',c.name);b.onclick=()=>pick(i);sw.appendChild(b)});pick(0);
-</script></main><footer><p><a href="guide.html">お買い物ガイド</a><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="about.html">お店情報</a></p><p>&copy; 極地的珍道具店 / お問い合わせ: info@polar-gizmo.party</p></footer></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0;url=product.html?id=picpak">
+<title>Picpak | 極地的珍道具店</title>
+<link rel="canonical" href="product.html?id=picpak">
+</head>
+<body>
+<p><a href="product.html?id=picpak">商品ページへ移動します</a></p>
+</body>
+</html>

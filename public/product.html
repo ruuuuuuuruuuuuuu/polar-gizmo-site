@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>商品 | 極地的珍道具店</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<a class="logo" href="index.html"><span class="seal">極</span>極地的珍道具店</a>
+<nav>
+<a href="index.html#items">商品一覧</a>
+<a href="guide.html">お買い物ガイド</a>
+<a href="about.html">お店情報</a>
+<a href="news.html">ニュース</a>
+</nav>
+</header>
+<main id="main"><p>読み込み中です。</p></main>
+<footer>
+<p>
+<a href="guide.html">お買い物ガイド</a>
+<a href="tokushoho.html">特定商取引法に基づく表記</a>
+<a href="about.html">お店情報</a>
+</p>
+<p>&copy; 極地的珍道具店 / お問い合わせ: info@polar-gizmo.party</p>
+</footer>
+<script>
+const id=new URLSearchParams(location.search).get('id');
+const main=document.getElementById('main');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+fetch('products.json').then(r=>r.json()).then(list=>{
+const p=list.find(x=>x.id===id);
+if(!p){
+main.innerHTML='<h1>商品が見つかりません</h1><p><a href="index.html#items">商品一覧へ戻る</a></p>';
+return;
+}
+document.title=p.name+' | 極地的珍道具店';
+main.innerHTML=`<section class="prod"><div class="pimg" id="img"></div><div><h1>${esc(p.name)}</h1><p class="price">&yen;${p.price.toLocaleString('ja-JP')}<small>税込・送料無料</small></p><p>${esc(p.lead)}</p><ul>${p.specs.map(s=>'<li>'+esc(s)+'</li>').join('')}</ul><p>カラー: <b id="cn"></b></p><div class="sw" id="sw"></div><a class="btn" id="buy">購入する</a><p class="note">並行輸入品のため、メーカー保証の対象外です。返品・交換は初期不良のみ、商品到着後3日以内にご連絡ください。詳しくは<a href="guide.html">お買い物ガイド</a>と<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></section>`;
+const sw=document.getElementById('sw'),img=document.getElementById('img'),cn=document.getElementById('cn'),buy=document.getElementById('buy');
+function pick(i){
+const c=p.colors[i];
+cn.textContent=c.name;
+img.innerHTML=c.img?'<img src="'+esc(c.img)+'" alt="'+esc(p.name+' '+c.name)+'">':'<div class="ph" style="background:'+esc(c.hex)+'"><span>'+esc(p.name)+'<br>'+esc(c.name)+'（仮画像）</span></div>';
+if(c.link){
+buy.href=c.link;
+buy.classList.remove('off');
+buy.textContent='購入する';
+}else{
+buy.removeAttribute('href');
+buy.classList.add('off');
+buy.textContent='販売準備中';
+}
+[...sw.children].forEach((b,j)=>b.classList.toggle('on',j===i));
+}
+p.colors.forEach((c,i)=>{
+const b=document.createElement('button');
+b.style.background=c.hex;
+b.title=c.name;
+b.setAttribute('aria-label',c.name);
+b.onclick=()=>pick(i);
+sw.appendChild(b);
+});
+pick(0);
+}).catch(()=>{
+main.innerHTML='<p>商品データを読み込めませんでした。時間をおいて、もう一度お開きください。</p>';
+});
+</script>
+</body>
+</html>
