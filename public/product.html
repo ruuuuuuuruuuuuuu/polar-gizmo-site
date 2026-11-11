@@ -30,7 +30,7 @@ main.innerHTML='<h1>商品が見つかりません</h1><p><a href="index.html#it
 return;
 }
 document.title=p.name+' | 極地的珍道具店';
-main.innerHTML=`<section class="prod"><div class="pimg" id="img"></div><div><h1>${esc(p.name)}</h1><p class="price">&yen;${p.price.toLocaleString('ja-JP')}<small>税込・送料無料</small></p><p>${esc(p.lead)}</p><ul>${p.specs.map(s=>'<li>'+esc(s)+'</li>').join('')}</ul><p>カラー: <b id="cn"></b></p><div class="sw" id="sw"></div><a class="btn" id="buy">購入する</a><p class="note">並行輸入品のため、メーカー保証の対象外です。返品・交換は初期不良のみ、商品到着後3日以内にご連絡ください。詳しくは<a href="guide.html">お買い物ガイド</a>と<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></section>`;
+main.innerHTML=`<div class="content"><section class="prod"><div class="pimg" id="img"></div><div><h1>${esc(p.name)}</h1><p class="price">&yen;${p.price.toLocaleString('ja-JP')}<small>税込・送料無料</small></p><p>${esc(p.lead)}</p><ul>${p.specs.map(s=>'<li>'+esc(s)+'</li>').join('')}</ul><p>カラー: <b id="cn"></b></p><div class="sw" id="sw"></div><a class="btn" id="buy">購入する</a><p class="note">並行輸入品のため、メーカー保証の対象外です。返品・交換は初期不良のみ、商品到着後3日以内にご連絡ください。詳しくは<a href="guide.html">お買い物ガイド</a>と<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></section></div>`;
 const sw=document.getElementById('sw'),img=document.getElementById('img'),cn=document.getElementById('cn'),buy=document.getElementById('buy');
 function pick(i){
 const c=p.colors[i];
