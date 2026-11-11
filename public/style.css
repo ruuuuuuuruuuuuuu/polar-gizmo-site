@@ -83,10 +83,12 @@ margin-right: 1.2rem;
 }
 
 /*-main-*/
+.hero {
+  margin: 0 0 60px;
+}
 .logo {
   display: block;
   width: 100%;
-  margin: 0 0 40px;
 }
 h1 {
 font-weight: 900;
