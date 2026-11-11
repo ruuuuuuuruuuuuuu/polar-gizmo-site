@@ -15,12 +15,12 @@ box-sizing: border-box;
 body {
 margin: 0;
 font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
-color: var(--g3);
+color: var(--bk);
 line-height: 1.8;
 background: #fff;
 }
 a {
-color: var(--g12);
+color: var(--bk);
 }
 
 /*-all-*/
