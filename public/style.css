@@ -145,37 +145,6 @@ border-color: var(--r2);
 outline-color: #fff;
 box-shadow: 5px 5px 0 rgba(0, 0, 0, .3);
 }
-.hang {
-position: relative;
-writing-mode: vertical-rl;
-background: #fff;
-color: var(--g12);
-font-weight: 900;
-font-size: clamp(1.2rem, 3vw, 1.7rem);
-line-height: 1.5;
-letter-spacing: .25em;
-padding: 1.2rem .6rem;
-margin-top: 4.4rem;
-border: 4px double var(--g1);
-outline: 3px solid #fff;
-box-shadow: 6px 6px 0 rgba(0, 0, 0, .3);
-}
-.hang::before {
-content: "";
-position: absolute;
-top: -2.2rem;
-left: 50%;
-width: 4px;
-height: 2.2rem;
-background: #fff;
-transform: translateX(-50%);
-}
-.hang.r {
-background: var(--r2);
-color: #fff;
-border-color: #fff;
-outline-color: var(--r2);
-}
 .btn {
 display: inline-block;
 background: var(--r2);
