@@ -10,15 +10,7 @@
 </head>
 <body>
 
-<header>
-<a href="index.html"><img src="images/icon.png" class="icon" /></a>
-<nav>
-<a href="index.html#items">商品一覧</a>
-<a href="guide.html">お買い物ガイド</a>
-<a href="about.html">お店情報</a>
-<a href="news.html">ニュース</a>
-</nav>
-</header>
+<site-header></site-header>
 
 <main>
 <div class="content">
@@ -27,7 +19,7 @@
 <img src="images/logo.png" class="logo" />
 </section>
 
-<h2 id="items">取り扱い商品</h2>
+<h2 id="items"><img src="images/h2-items.png" class="h2-img" /></h2>
 <div class="cards" id="cards"></div>
 <p class="note">
 当店の商品は並行輸入品です。メーカー保証の対象外となりますので、ご購入前に<a href="guide.html">お買い物ガイド</a>をご確認ください。
@@ -36,14 +28,7 @@
 </div>
 </main>
 
-<footer>
-<p>
-<a href="guide.html">お買い物ガイド</a>
-<a href="tokushoho.html">特定商取引法に基づく表記</a>
-<a href="about.html">お店情報</a>
-</p>
-<p>&copy; 極地的珍道具店 / お問い合わせ: staff@polar-gizmo.party</p>
-</footer>
+<site-footer></site-footer>
 
 <script>
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
