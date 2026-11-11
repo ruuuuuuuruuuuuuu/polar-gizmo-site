@@ -40,7 +40,7 @@ align-items: center;
 justify-content: space-between;
 gap: .5rem 1.5rem;
 padding: 1.3rem 5vw .7rem;
-background: rgba(255,255,255,0.3);
+background: rgba(255,255,255,0.7);
 }
 header img {
   display: block;
