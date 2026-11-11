@@ -91,18 +91,13 @@ border-bottom: 4px double var(--g1);
 padding-bottom: .3em;
 }
 h2 {
-display: inline-block;
-background: var(--g1);
-color: #fff;
-font-weight: 900;
-font-size: 1.25rem;
-line-height: 1.5;
-padding: .2em 1.1em;
-margin: 2.8rem 0 1.2rem;
-border: 3px double #fff;
-outline: 3px solid var(--g1);
+  display: block;
 }
-
+h2 .h2-img {
+  display: block;
+  height: 80px;
+  margin: 0 auto;
+}
 .sign {
 background: var(--r2);
 color: #fff;
