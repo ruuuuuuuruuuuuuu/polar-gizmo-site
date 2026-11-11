@@ -1,7 +1,7 @@
 const SHOP={
 name:'極地的珍道具店',
 mail:'staff@polar-gizmo.party',
-logo:'images/logo.png'
+logo:'images/icon.png'
 };
 // メニュー(右上)。項目を画像にするときは、3つ目に画像のパスを足す 例: ['guide.html','お買い物ガイド','images/nav-guide.png']
 const NAV=[
