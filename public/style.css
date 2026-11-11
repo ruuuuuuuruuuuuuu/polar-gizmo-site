@@ -209,7 +209,6 @@ margin: .3rem 0;
 display: grid;
 place-items: center;
 width: 100%;
-height: 100%;
 aspect-ratio: 1;
 border: 1px solid #cfe0d6;
 }
