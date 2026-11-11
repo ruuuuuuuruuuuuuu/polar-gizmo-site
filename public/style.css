@@ -64,18 +64,23 @@ nav a:focus-visible {
 border-color: var(--r2);
 }
 
+/*-footer-*/
+footer {
+background: var(--g1);
+color: #fff;
+padding: 2rem 5vw;
+font-size: .9rem;
+}
+footer a {
+color: #fff;
+margin-right: 1.2rem;
+}
+
 /*-main-*/
 .logo {
   display: block;
   width: 100%;
 }
-/*
-main {
-max-width: 960px;
-margin: 0 auto;
-padding: 2rem 5vw 4rem;
-}
-*/
 h1 {
 font-weight: 900;
 color: var(--g12);
@@ -97,20 +102,7 @@ margin: 2.8rem 0 1.2rem;
 border: 3px double #fff;
 outline: 3px solid var(--g1);
 }
-/*
-.hero {
-display: flex;
-gap: clamp(1rem, 4vw, 3rem);
-align-items: flex-start;
-justify-content: center;
-background-color: var(--g1);
-background-image: linear-gradient(rgba(255, 255, 255, .5) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, .5) 2px, transparent 2px);
-background-size: 34px 34px;
-border-bottom: 8px solid var(--r2);
-padding: 3.5rem 5vw 3rem;
-margin: -2rem -5vw 2.5rem;
-}
-*/
+
 .sign {
 background: var(--r2);
 color: #fff;
@@ -305,21 +297,8 @@ font-weight: 900;
 padding: 0 .7em;
 margin-right: 1rem;
 }
-footer {
-background: var(--g12);
-color: #fff;
-padding: 2rem 5vw;
-font-size: .9rem;
-border-top: 8px solid var(--r2);
-}
-footer a {
-color: #fff;
-margin-right: 1.2rem;
-}
+
 @media (max-width: 700px) {
-.hang {
-display: none;
-}
 .sign {
 padding: 1.4rem 1.2rem;
 }
