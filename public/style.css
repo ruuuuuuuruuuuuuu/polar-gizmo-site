@@ -177,7 +177,8 @@ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 gap: 2rem;
 }
 .card {
-display: block;
+display: flex;
+flex-direction: column;
 background: #fff;
 color: var(--bk);
 text-decoration: none;
@@ -190,6 +191,8 @@ border-color: var(--r2);
 }
 .card .ph,
 .card .pimg {
+flex: none;
+height: auto;
 border: 0;
 border-bottom: 4px solid var(--g1);
 }
@@ -197,6 +200,7 @@ border-bottom: 4px solid var(--g1);
 aspect-ratio: 1;
 }
 .card div.t {
+flex: 1;
 padding: .9rem 1rem 1.1rem;
 }
 .t-itemname {
