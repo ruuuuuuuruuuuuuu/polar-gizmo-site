@@ -93,7 +93,57 @@ ${CLIENT}
 `;
 }
 
+// 商品一覧ページ(/products/)用。カードの作りは、トップページのカードと同じにしてある
+const card = p => {
+  const c = p.colors[0];
+  const src = p.thumb || c.img;
+  const thumb = src
+    ? '<div class="pimg"><img src="' + esc(src) + '" alt="' + esc(p.name) + '"></div>'
+    : '<div class="ph" style="background:' + esc(c.hex) + '"><span>' + esc(p.name) + '（仮画像）</span></div>';
+  return '<a class="card" href="products/' + encodeURIComponent(p.id) + '/">' + thumb + '<div class="t"><b>' + esc(p.name) + '</b><br>' + esc(p.lead) + '<br><span class="pr">&yen;' + yen(p.price) + '（税込・送料無料）</span> / ' + p.colors.length + '色</div></a>';
+};
+
+function listPage(list) {
+  const url = SITE + '/products/';
+  const title = '商品一覧 | ' + NAME;
+  const desc = NAME + 'の商品一覧。日本では買えない、珍しくて面白い海外製ガジェットを並行輸入でお届けします。';
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: list.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + '/products/' + p.id + '/', name: p.name }))
+  };
+  return `<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<base href="/">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url}">
+<link rel="stylesheet" href="style.css">
+<script src="site.js"></script>
+<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
+</head>
+<body>
+<site-header></site-header>
+<main>
+<h1>商品一覧</h1>
+<div class="cards">${list.map(card).join('')}</div>
+<p class="note">当店の商品は並行輸入品です。メーカー保証の対象外となりますので、ご購入前に<a href="guide.html">お買い物ガイド</a>をご確認ください。</p>
+</main>
+<site-footer></site-footer>
+</body>
+</html>
+`;
+}
+
 const made = [];
+const valid = [];
 for (const p of products) {
   if (!/^[a-z0-9-]+$/i.test(String(p.id))) {
     console.warn('id は半角英数字とハイフンだけにしてください。スキップしました:', p.id);
@@ -103,9 +153,12 @@ for (const p of products) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(dir + '/index.html', page(p));
   made.push(SITE + '/products/' + p.id + '/');
+  valid.push(p);
 }
 
-const urls = [SITE + '/', ...made];
+fs.mkdirSync(PUB + '/products', { recursive: true });
+fs.writeFileSync(PUB + '/products/index.html', listPage(valid));
+const urls = [SITE + '/', SITE + '/products/', ...made];
 fs.writeFileSync(PUB + '/sitemap.xml',
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map(u => '<url><loc>' + u + '</loc></url>').join('\n') + '\n</urlset>\n');
