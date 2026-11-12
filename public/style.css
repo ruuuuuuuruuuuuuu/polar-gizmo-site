@@ -205,8 +205,9 @@ display: inline-block;
 background: var(--r2);
 color: #fff;
 font-weight: 900;
-padding: .05em .7em;
+padding: 11px 10px 9px;
 margin: .3rem 0;
+line-height: 1;
 }
 .ph {
 display: grid;
