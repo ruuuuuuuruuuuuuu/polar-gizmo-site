@@ -1,10 +1,14 @@
 // 商品ごとの静的ページ(/products/商品ID/)と sitemap.xml を、products.json から自動で作る
 // デプロイのたびに実行される。商品ページの見た目や構造を変えるときは、下の page() を編集する
 import fs from 'node:fs';
+import path from 'node:path';
+import { createRequire } from 'node:module';
 
 const SITE = 'https://polar-gizmo.party';
 const NAME = '極地的珍道具店';
 const PUB = process.argv[2] || 'public';
+// カードのHTMLは public/cards.js にまとめてある(トップページと共通)
+const Cards = createRequire(import.meta.url)(path.resolve(PUB, 'cards.js'));
 
 const products = JSON.parse(fs.readFileSync(PUB + '/products.json', 'utf8'));
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -93,15 +97,11 @@ ${CLIENT}
 `;
 }
 
-// 商品一覧ページ(/products/)用。カードの作りは、トップページのカードと同じにしてある
-const card = p => {
-  const c = p.colors[0];
-  const src = p.thumb || c.img;
-  const thumb = src
-    ? '<div class="pimg"><img src="' + esc(src) + '" alt="' + esc(p.name) + '"></div>'
-    : '<div class="ph" style="background:' + esc(c.hex) + '"><span>' + esc(p.name) + '（仮画像）</span></div>';
-  return '<a class="card" href="products/' + encodeURIComponent(p.id) + '/">' + thumb + '<div class="t"><b>' + esc(p.name) + '</b><br>' + esc(p.lead) + '<br><span class="pr">&yen;' + yen(p.price) + '（税込・送料無料）</span> / ' + p.colors.length + '色</div></a>';
-};
+// 商品一覧ページ(/products/)用。見出しと注意書きは、トップページ(public/index.html)のものをそのまま使う
+const indexHtml = fs.existsSync(PUB + '/index.html') ? fs.readFileSync(PUB + '/index.html', 'utf8') : '';
+let HEADING = (indexHtml.match(/<h2 id="items">[\s\S]*?<\/h2>/) || ['<h2>商品一覧</h2>'])[0];
+if (!/alt=/.test(HEADING)) HEADING = HEADING.replace(/<img /, '<img alt="商品一覧" ');
+const TEXTBOX = (indexHtml.match(/<section class="textbox">[\s\S]*?<\/section>/) || [''])[0];
 
 function listPage(list) {
   const url = SITE + '/products/';
@@ -132,9 +132,14 @@ function listPage(list) {
 <body>
 <site-header></site-header>
 <main>
-<h1>商品一覧</h1>
-<div class="cards">${list.map(card).join('')}</div>
-<p class="note">当店の商品は並行輸入品です。メーカー保証の対象外となりますので、ご購入前に<a href="guide.html">お買い物ガイド</a>をご確認ください。</p>
+<div class="content">
+<section class="items">
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">商品一覧</h1>
+${HEADING}
+<div class="cards">${Cards.cards(list)}</div>
+</section>
+${TEXTBOX}
+</div>
 </main>
 <site-footer></site-footer>
 </body>
