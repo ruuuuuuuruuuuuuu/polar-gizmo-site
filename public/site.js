@@ -5,15 +5,15 @@ logo:'images/icon.png'
 };
 // メニュー(右上)。項目を画像にするときは、3つ目に画像のパスを足す 例: ['guide.html','お買い物ガイド','images/nav-guide.png']
 const NAV=[
-['index.html#items','商品一覧','images/h2-items.png'],
+['products.html','取り扱い道具','images/h2-items.png'],
 ['guide.html','お買い物ガイド','images/h2-guide.png'],
-['about.html','お店情報','images/h2-about.png'],
-['news.html','ニュース','images/h2-news.png']
+['about.html','アバウト当店','images/h2-about.png'],
+['news.html','お知らせ','images/h2-news.png']
 ];
 const FOOT=[
 ['guide.html','お買い物ガイド'],
 ['tokushoho.html','特定商取引法に基づく表記'],
-['about.html','お店情報']
+['about.html','アバウト当店']
 ];
 const link=n=>'<a href="'+n[0]+'">'+(n[2]?'<img src="'+n[2]+'" alt="'+n[1]+'">':n[1])+'</a>';
 const links=list=>list.map(link).join('');
