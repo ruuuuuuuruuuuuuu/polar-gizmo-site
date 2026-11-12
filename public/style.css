@@ -99,7 +99,7 @@ main section + section {
 }
 h1 {
 font-weight: 900;
-color: var(--g12);
+color: var(--g1);
 line-height: 1.5;
 }
 main > h1 {
@@ -158,7 +158,7 @@ padding: .8rem 2.4rem;
 margin: 3px;
 border: 3px double #fff;
 outline: 3px solid var(--r2);
-box-shadow: 5px 5px 0 var(--g12);
+box-shadow: 5px 5px 0 var(--g1);
 cursor: pointer;
 }
 .btn:hover,
