@@ -1,8 +1,9 @@
 {
-  "name": "polar-gizmo",
-  "compatibility_date": "2026-11-01",
-  "assets": { "directory": "./public" },
-  "routes": [
-    { "pattern": "polar-gizmo.party", "custom_domain": true }
-  ]
+"name": "polar-gizmo",
+"compatibility_date": "2026-11-01",
+"build": { "command": "node build.mjs" },
+"assets": { "directory": "./public" },
+"routes": [
+{ "pattern": "polar-gizmo.party", "custom_domain": true }
+]
 }
