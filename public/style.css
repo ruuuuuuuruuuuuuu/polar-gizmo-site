@@ -63,12 +63,12 @@ font-weight: 700;
 font-size: .95rem;
 padding: .2rem 0;
 border-bottom: 3px solid transparent;
-  transition: 0.3;
+  transition: .3s;
 }
 nav a:hover,
 nav a:focus-visible {
 border-color: var(--r2);
-  transition: 0.3;
+  transition: .3s;
 }
 
 /*-footer-*/
@@ -184,10 +184,12 @@ color: var(--bk);
 text-decoration: none;
 border: 4px solid var(--g1);
 box-shadow: 6px 6px 0 var(--bk);
+  transition: .3s;
 }
 .card:hover,
 .card:focus-visible {
 border-color: var(--r2);
+  transition: .3s;
 }
 .card .ph,
 .card .pimg {
