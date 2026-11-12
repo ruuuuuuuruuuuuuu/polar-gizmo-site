@@ -202,14 +202,14 @@ aspect-ratio: 1;
 .card div.t {
 flex: 1;
 position: relative;
-padding: .9rem 1rem 1.1rem;
+padding: 15px;
 }
 .t-itemname {
 font-size: 130%;
 font-weight: 900;
 }
 .t-itemtext {
-padding: 0 0 30px;
+padding: 0 0 80px;
 }
 .t-itemprice {
 position: absolute;
