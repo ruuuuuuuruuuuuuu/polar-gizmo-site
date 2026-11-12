@@ -9,7 +9,7 @@
 "デジタルフォトフレーム"
 ],
 "colors":[
-{"name":"ホワイト","hex":"#f4f4f0","img":"public/images/item-picpak.jpg","link":""},
+{"name":"ホワイト","hex":"#f4f4f0","img":"images/item-picpak.jpg","link":""},
 {"name":"ブラック","hex":"#222222","img":"","link":""},
 {"name":"レッド","hex":"#c8102e","img":"","link":""},
 {"name":"ブルー","hex":"#2f6fb5","img":"","link":""}
