@@ -215,6 +215,7 @@ position: absolute;
 bottom: 15px;
 right: 15px;
 text-align: right;
+line-height: 1;
 }
 .card .postage {
 display: inline-block;
