@@ -200,27 +200,25 @@ aspect-ratio: 1;
 padding: .9rem 1rem 1.1rem;
 }
 .t-itemname {
-font-size: 120%;
+font-size: 130%;
+font-weight: 900;
 }
 .t-itemtext {
-
 }
 .t-itemprice {
 text-align: right;
-}
-.card b {
-font-weight: 900;
 }
 .card .postage {
 display: inline-block;
 margin: 0 10px 0 0;
 color: var(--r2);
 font-size: 80%;
+font-weight: 900;
 }
 .card .pr {
 display: inline-block;
 color: var(--r2);
-font-size: 140%;
+font-size: 170%;
 font-weight: 900;
 }
 .ph {
