@@ -132,7 +132,8 @@ h2 .h2-img {
   height: 40px;
 }
 .hero {
-padding: 0m;
+  margin: 0 0 30px;
+  padding: 0;
 }
 }
 
