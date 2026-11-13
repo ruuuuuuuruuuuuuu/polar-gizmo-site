@@ -151,14 +151,12 @@ box-shadow: 5px 5px 0 rgba(0, 0, 0, .3);
 }
 .btn {
 display: inline-block;
-background: var(--r1);
+background: var(--r2);
 color: #fff;
 text-decoration: none;
 font-weight: 900;
 padding: .8rem 2.4rem;
 margin: 3px;
-border: 3px double #fff;
-outline: 3px solid var(--r1);
 box-shadow: 5px 5px 0 var(--bk);
 cursor: pointer;
 }
@@ -270,7 +268,7 @@ margin: .2rem 0;
 }
 .price small {
 font-size: .8rem;
-color: var(--r1);
+color: var(--r2);
 font-weight: 900;
 margin-left: .5rem;
 }
