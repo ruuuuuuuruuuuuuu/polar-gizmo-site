@@ -1,0 +1,21 @@
+{
+"name": "極地的珍道具店",
+"short_name": "極地的珍道具店",
+"description": "日本では買えない、珍しくて面白い海外製ガジェットの並行輸入ショップ",
+"start_url": "/",
+"display": "standalone",
+"background_color": "#fff",
+"theme_color": "#fff",
+"icons": [
+{
+"src": "/android-chrome-192x192.png",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "/android-chrome-512x512.png",
+"sizes": "512x512",
+"type": "image/png"
+}
+]
+}
