@@ -32,6 +32,6 @@ put(this,'<header>'+logo+'<nav>'+links(NAV)+'</nav></header>');
 });
 customElements.define('site-footer',class extends HTMLElement{
 connectedCallback(){
-put(this,'<footer><p>'+links(FOOT)+'</p><p>&copy; '+SHOP.name+' / お問い合わせ: '+SHOP.mail+'</p></footer>');
+put(this,'<footer><p>'+links(FOOT)+'</p><p>&copy; '+SHOP.name+' / お問い合わせ：'+SHOP.mail+'</p></footer>');
 }
 });
