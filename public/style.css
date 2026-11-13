@@ -51,7 +51,7 @@ header img {
   display: block;
   width: 10%;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 header {
   background: rgba(255,255,255,0);
 }
@@ -127,9 +127,12 @@ h2 .h2-img {
   height: 80px;
   margin: 0 auto;
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 h2 .h2-img {
   height: 40px;
+}
+.hero {
+padding: 2.5rem 5vw 2.2rem;
 }
 }
 
@@ -188,8 +191,10 @@ background: #999;
 box-shadow: none;
 pointer-events: none;
 }
-@media (max-width: 700px) {
-  
+@media (max-width: 600px) {
+.sign {
+padding: 0;
+}
 }
 
 /*-cards-*/
@@ -350,14 +355,7 @@ font-weight: 900;
 padding: 0 .7em;
 margin-right: 1rem;
 }
-
-@media (max-width: 700px) {
-.sign {
-padding: 1.4rem 1.2rem;
-}
-.hero {
-padding: 2.5rem 5vw 2.2rem;
-}
+@media (max-width: 600px) {
 .tbl th {
 width: 36%;
 }
