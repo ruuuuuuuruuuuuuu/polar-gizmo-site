@@ -51,6 +51,13 @@ header img {
   display: block;
   width: 10%;
 }
+@media (max-width: 700px) {
+header {
+  background: rgba(255,255,255,0);
+}
+}
+
+/*-nav-*/
 nav {
 display: flex;
 flex-wrap: wrap;
@@ -69,6 +76,11 @@ nav a:hover,
 nav a:focus-visible {
 border-color: var(--r2);
   transition: .3s;
+}
+@media (max-width: 700px) {
+nav {
+  display: none;
+}
 }
 
 /*-footer-*/
