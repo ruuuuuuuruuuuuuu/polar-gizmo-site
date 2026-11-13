@@ -151,15 +151,15 @@ box-shadow: 5px 5px 0 rgba(0, 0, 0, .3);
 }
 .btn {
 display: inline-block;
-background: var(--r2);
+background: var(--r1);
 color: #fff;
 text-decoration: none;
 font-weight: 900;
 padding: .8rem 2.4rem;
 margin: 3px;
 border: 3px double #fff;
-outline: 3px solid var(--r2);
-box-shadow: 5px 5px 0 var(--g1);
+outline: 3px solid var(--r1);
+box-shadow: 5px 5px 0 var(--bk);
 cursor: pointer;
 }
 .btn:hover,
@@ -167,8 +167,7 @@ cursor: pointer;
 background: #a30d25;
 }
 .btn.off {
-background: #9aa;
-outline-color: #9aa;
+background: #ccc;
 box-shadow: none;
 pointer-events: none;
 }
