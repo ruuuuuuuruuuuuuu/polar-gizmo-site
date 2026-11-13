@@ -271,8 +271,8 @@ margin: .2rem 0;
 }
 .price small {
 font-size: .8rem;
-color: var(--g3);
-font-weight: 400;
+color: var(--r1);
+font-weight: 900;
 margin-left: .5rem;
 }
 .sw {
