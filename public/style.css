@@ -340,3 +340,9 @@ padding: 2.5rem 5vw 2.2rem;
 width: 36%;
 }
 }
+
+/*-product-*/
+.product-logo {
+  width: 300px;
+  margin: 0 auto;
+}
