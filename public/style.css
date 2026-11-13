@@ -181,7 +181,7 @@ background: #fff;
 color: var(--bk);
 text-decoration: none;
 border: 4px solid var(--g1);
-box-shadow: 6px 6px 0 var(--bk);
+box-shadow: 6px 6px 0 var(--g1);
   transition: .3s;
 }
 .card:hover,
