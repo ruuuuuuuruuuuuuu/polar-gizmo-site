@@ -343,6 +343,7 @@ width: 36%;
 
 /*-product-*/
 .product-logo {
-  width: 300px;
+  width: 180px;
   margin: 0 auto;
+  padding: 20px 0;
 }
