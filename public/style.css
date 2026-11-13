@@ -165,7 +165,7 @@ cursor: pointer;
 background: #a30d25;
 }
 .btn.off {
-background: #ccc;
+background: #999;
 box-shadow: none;
 pointer-events: none;
 }
