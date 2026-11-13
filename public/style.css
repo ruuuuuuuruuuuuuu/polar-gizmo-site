@@ -297,6 +297,7 @@ margin-top: 1.2rem;
 }
 .tbl {
 width: 100%;
+font-size: 80%;
 border-collapse: collapse;
 }
 .tbl th,
@@ -307,8 +308,8 @@ vertical-align: top;
 text-align: left;
 }
 .tbl th {
-background: var(--g1);
-color: #fff;
+background: var(--soft);
+color: var(--bk);
 width: 30%;
 }
 .news {
