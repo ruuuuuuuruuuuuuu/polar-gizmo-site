@@ -71,6 +71,9 @@ ${imgs.length ? '<meta property="og:image" content="' + esc(imgs[0]) + '">' : ''
 <site-header></site-header>
 <main>
 <div class="content">
+<section class="product-logo">
+<img src="images/logo.png" alt="極地的珍道具店" class="logo" />
+</section>
 <section class="prod">
 <div class="pimg" id="img">${ph(p, c0)}</div>
 <div>
